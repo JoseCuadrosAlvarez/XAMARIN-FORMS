@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMARIN_FORMULARIO.MainPage"
+             BackgroundColor="#f0f0f5">
+
+    <ContentPage.Resources>
+        <!-- Define estilos aquí -->
+        <Style x:Key="CVLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="#2a52be" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+        </Style>
+        <Style x:Key="TitleLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="TextColor" Value="#1e90ff" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,15,0,15" />
+        </Style>
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="PlaceholderColor" Value="Gray" />
+            <Setter Property="Margin" Value="10,5,10,5" />
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#1e90ff" />
+            <Setter Property="Margin" Value="10,20,10,0" />
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20">
+        <Entry x:Name="NombreEntry" Placeholder="Nombre" Style="{StaticResource EntryStyle}" />
+        <Entry x:Name="ApellidoEntry" Placeholder="Apellido" Style="{StaticResource EntryStyle}" />
+        <Entry x:Name="EmailEntry" Placeholder="Email" Style="{StaticResource EntryStyle}" />
+        <Entry x:Name="UniversidadEntry" Placeholder="Universidad" Style="{StaticResource EntryStyle}" />
+        <Entry x:Name="CarreraEntry" Placeholder="Carrera" Style="{StaticResource EntryStyle}" />
+        <Entry x:Name="TelefonoEntry" Placeholder="Teléfono" Style="{StaticResource EntryStyle}" />
+        <Button Text="Generar CV" Clicked="OnGenerarCVClicked" Style="{StaticResource ButtonStyle}" />
+        <StackLayout x:Name="CVStackLayout" Padding="10" BackgroundColor="White" Margin="10,20,10,20" />
+    </StackLayout>
+
+</ContentPage>
